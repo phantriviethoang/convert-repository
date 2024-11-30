@@ -1,0 +1,1 @@
+$repos = gh repo list buddybaddog --visibility public --json name -q ".[].name"
