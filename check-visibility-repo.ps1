@@ -1,0 +1,1 @@
+gh repo view buddybaddog/auto-convert-repo --json visibility
