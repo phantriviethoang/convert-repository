@@ -2,11 +2,12 @@
 # Cài GitHub CLI
 gh auth login
 # Hiển thị repo
-gh repo list buddybaddog --visibility public --limit 100
+gh repo list fairlywell --visibility public --limit 100
 # Convert
-$repos = gh repo list buddybaddog --visibility public --json name -q ".[].name"
+$repos = gh repo list fairlywell --visibility public --json name -q ".[].name"
 # Convert
 foreach ($repo in $repos) {
-  gh repo edit buddybaddog/$repo --visibility private --accept-visibility-change-consequences
-  Write-Host "Đã chuyển repository buddybaddog/$repo thành riêng tư"
+    $fullRepo = "fairlywell/$repo" # Nối tên owner với repo
+    gh repo edit $fullRepo --visibility private --accept-visibility-change-consequences
+    Write-Host "Đã chuyển repository $fullRepo thành riêng tư"
 }
