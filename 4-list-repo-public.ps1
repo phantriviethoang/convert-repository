@@ -1,1 +1,0 @@
-gh repo list buddybaddog --visibility public --limit 100
